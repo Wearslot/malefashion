@@ -1,0 +1,28 @@
+{
+    "sections": {
+        "footer": {
+            "type": "footer",
+            "widgets": {
+                "footer_logo": {
+                    "settings": {
+                        "image": "sample.png"
+                    }
+                },
+                "quick_links": {
+                    "type": "navigation",
+                    "handle": "footer_menu",
+                    "settings": {
+                        "heading": "Quick Links"
+                    }
+                }
+            },
+            "settings": {
+                "newsletter_block_heading": "Newsletter",
+                "newsletter_block_desc": "Be the first to know about new arrivals, look books, sales & promos!"
+            }
+        }
+    },
+    "order": [
+        "footer"
+    ]
+}

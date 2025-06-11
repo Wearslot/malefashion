@@ -1,0 +1,27 @@
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb__text">
+                    <h4>{{#ifCond current_page '==' 'collection'}} {{collection.name}} {{else}} {{title}} {{/ifCond}}
+                    </h4>
+                    <div class="breadcrumb__links">
+                        <a href="/">Home</a>
+                        {{#ifCond current_page '==' 'collection'}}
+                        <!-- <a href="/collections">Collections</a> -->
+                        <span>
+                            {{collection.name}}
+                        </span>
+                        {{else}}
+                        <span>
+                            {{title}}
+                        </span>
+                        {{/ifCond}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->

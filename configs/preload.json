@@ -1,0 +1,6 @@
+{
+    "data": {
+        "payment_methods": true,
+        "collections": true
+    }
+}

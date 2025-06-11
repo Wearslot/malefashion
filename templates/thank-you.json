@@ -1,0 +1,15 @@
+{
+    "layout": "main",
+    "sections": {
+        "order-placed": {
+            "type": "checkout-completed",
+            "settings": {
+                "title": "Your Order has been received.",
+                "show_image": true
+            }
+        }
+    },
+    "order": [
+        "order-placed"
+    ]
+}

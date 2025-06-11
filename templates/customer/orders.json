@@ -1,0 +1,11 @@
+{
+    "layout": "",
+    "sections": {
+        "orders": {
+            "type": "customer/main-orders"
+        }
+    },
+    "order": [
+        "orders"
+    ]
+}

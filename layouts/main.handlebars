@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{{store.description}}">
+    <meta name="keywords" content="{{store.description}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}} | {{store.name}}</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+    <script src="{{asset_url}}/js/global.js"></script>
+    <link rel="shortcut icon" type="image/favicon" href="{{store.settings.favicon}}">
+    <link rel="stylesheet" href="{{asset_url}}/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="{{asset_url}}/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="{{asset_url}}/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="{{asset_url}}/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="{{asset_url}}/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="{{asset_url}}/css/slicknav.min.css" type="text/css">
+    {{#styles}}
+        :root {
+            --primary-color: {{store.settings.primary_color}} !important;
+            --secondary-color: {{store.settings.secondary_color}} !important;
+            --primary-text-color: {{store.settings.text_color}} !important;
+            --secondary-text-color: {{store.settings.secondary_text_color}} !important;
+            --secondary-text-color: {{store.settings.secondary_text_color}} !important;
+        }
+    {{/styles}}
+    <link rel="stylesheet" href="{{asset_url}}/css/style.css" type="text/css">
+    <script src="{{asset_url}}/js/jquery-3.3.1.min.js"></script>
+    <script src="{{asset_url}}/js/jquery.countdown.min.js"></script>
+
+    <script type="text/javascript">
+        window.currency_code = "{{currency.code}}"
+    </script>
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    {{{sections "header-group"}}}
+
+    {{{content}}}
+
+    {{{sections "footer-group"}}}
+
+    <!-- Search Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            {{#form 'search' 'class="search-model-form"'}}
+            <input type="text" name="keywords" id="search-input" placeholder="Search here.....">
+            {{/form}}
+        </div>
+    </div>
+    <!-- Search End -->
+
+    <!-- Js Plugins -->
+    <script src="{{asset_url}}/js/bootstrap.min.js"></script>
+    <script src="{{asset_url}}/js/jquery.nice-select.min.js"></script>
+    <script src="{{asset_url}}/js/jquery.nicescroll.min.js"></script>
+    <script src="{{asset_url}}/js/jquery.magnific-popup.min.js"></script>
+    <script src="{{asset_url}}/js/jquery.slicknav.js"></script>
+    <script src="{{asset_url}}/js/mixitup.min.js"></script>
+    <script src="{{asset_url}}/js/owl.carousel.min.js"></script>
+    <script src="{{asset_url}}/js/main.js"></script>
+</body>
+
+
+</html>

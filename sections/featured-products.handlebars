@@ -1,0 +1,96 @@
+{{#if section.settings.show}}
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="filter__controls">
+                    <li class="active" data-filter="*" style="font-size: {{section.settings.heading_size}}px;">
+                        {{section.settings.heading}}</li>
+                </ul>
+            </div>
+        </div>
+
+        {{#ifCond best_selling.data.length '>' 0}}
+        <div class="row product__filter">
+            {{#iterate best_selling as="product" limit="8"}}
+            <div
+                class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix {{#iterate product.collections as='pcol'}} {{pcol.slug}} {{/iterate}}">
+                <div class="product__item">
+                    <a href="/product/{{product.slug}}">
+                        <div class="product__item__pic set-bg" data-product-id="{{product.id}}"
+                            data-setbg="{{ product.image.main }}">
+                            {{#ifCond product.discount ">" 0}}
+                            <span class="label">Sale</span>
+                            {{/ifCond}}
+                        </div>
+                    </a>
+                    <div class="product__item__text">
+                        <h6>{{ product.name }}</h6>
+                        <a href="/product/{{product.slug}}" class="add-cart">{{#if product.has_variations}} Select
+                            Options {{else}} + Add To Cart {{/if}}</a>
+                        <div class="rating" data-rate="{{ product.rating }}">
+                        </div>
+                        <h5>{{{ product_price product }}}</h5>
+                    </div>
+                </div>
+            </div>
+            {{/iterate}}
+        </div>
+        {{/ifCond}}
+
+        {{#unless best_selling.data.length}}
+        {{#ifCond featured_products.data.length '>' 0}}
+        <div class="row product__filter">
+            {{#iterate featured_products as="product" limit="8"}}
+            <div
+                class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix {{#iterate product.collections as='pcol'}} {{pcol.slug}} {{/iterate}}">
+                <div class="product__item">
+                    <a href="/product/{{product.slug}}">
+                        <div class="product__item__pic set-bg" data-product-id="{{product.id}}"
+                            data-setbg="{{ product.image.main }}">
+                            {{#ifCond product.discount ">" 0}}
+                            <span class="label">Sale</span>
+                            {{/ifCond}}
+                            <!-- <ul class="product__hover">
+                                        <li><a href="#"><img src="{{asset_url}}/img/icon/heart.png" alt=""></a></li>
+                                        <li><a href="#"><img src="{{asset_url}}/img/icon/compare.png" alt=""> <span>Compare</span></a>
+                                        </li>
+                                        <li><a href="#"><img src="{{asset_url}}/img/icon/search.png" alt=""></a></li>
+                                    </ul> -->
+                        </div>
+                    </a>
+                    <div class="product__item__text">
+                        <h6>{{ product.name }}</h6>
+                        <a href="/product/{{product.slug}}" class="add-cart">{{#if product.has_variations}} Select
+                            Options {{else}} + Add To Cart {{/if}}</a>
+                        <div class="rating" data-rate="{{ product.rating }}">
+                        </div>
+                        <h5>{{{ product_price product }}}</h5>
+                        {{!-- {{#if product.has_variations}}
+                        <div class="product__color__select">
+                            {{#iterate product.variations}}
+                            {{#ifCond current.group.name '==' 'Colors'}}
+                            <label style="background-color: {{current.name}};"
+                                class="color-switch {{#ifCond current.index '==' 0}} active {{/ifCond}}"
+                                for="pc-{{current.index}}" data-variation="{{json current}}"
+                                data-options="{{json product.variation_options}}" data-target="{{product.id}}">
+                                <input type="radio" id="pc-{{current.index}}">
+                            </label>
+                            {{/ifCond}}
+                            {{/iterate}}
+                        </div>
+                        {{/if}} --}}
+                    </div>
+                </div>
+            </div>
+            {{/iterate}}
+        </div>
+        {{/ifCond}}
+        {{/unless}}
+
+
+    </div>
+</section>
+
+<script type="text/javascript" src="{{asset_url}}/js/product-variant-switch.js"></script>
+{{/if}}

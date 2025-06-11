@@ -1,0 +1,129 @@
+{
+    "layout": "main",
+    "sections": {
+        "hero": {
+            "type": "home-hero",
+            "widgets": {
+                "slide_1": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "https://malefashion.taojaa.shop/malefashion/malefashion/1.0.0/assets/img/hero/hero-2.jpg",
+                        "sub_heading": "Summer Collection",
+                        "heading": "Fall - Winter Collections 2030",
+                        "description": "A specialist label creating luxury essentials. Ethically crafted with an unwavering commitment to exceptional quality.",
+                        "button_text": {
+                            "type": "input",
+                            "default": "Shop Now"
+                        }
+                    }
+                },
+                "slide_2": {
+                    "type": "slide",
+                    "settings": {
+                        "image": "https://malefashion.taojaa.shop/malefashion/malefashion/1.0.0/assets/img/hero/hero-1.jpg",
+                        "sub_heading": "Summer Collection",
+                        "heading": "Fall - Winter Collections 2030",
+                        "description": "A specialist label creating luxury essentials. Ethically crafted with an unwavering commitment to exceptional quality.",
+                        "button_text": {
+                            "type": "input",
+                            "default": "Shop Now"
+                        }
+                    }
+                }
+            }
+        },
+        "featured-products": {
+            "type": "featured-products",
+            "settings": {
+                "show": true,
+                "heading": "Best Sellers",
+                "heading_size": 30
+            }
+        },
+        "featured-collections": {
+            "type": "featured-collections",
+            "widgets": {
+                "collection_1": {
+                    "settings": {
+                        "heading": "Clothing Collections 2030",
+                        "button_text": "Shop Now",
+                        "button_link": "https://malefashion.taojaa.shop/collection_1",
+                        "image": "https://malefashion.taojaa.shop/malefashion/malefashion/1.0.0/assets/img/banner/banner-1.jpg"
+                    }
+                },
+                "collection_2": {
+                    "settings": {
+                        "heading": "Accessories",
+                        "button_text": "Shop Now",
+                        "button_link": "https://malefashion.taojaa.shop/collection_2",
+                        "image": "https://malefashion.taojaa.shop/malefashion/malefashion/1.0.0/assets/img/banner/banner-2.jpg"
+                    }
+                },
+                "collection_3": {
+                    "settings": {
+                        "heading": "Shoes Spring 2030",
+                        "button_text": "Shop Now",
+                        "button_link": "https://malefashion.taojaa.shop/collection_3",
+                        "image": "https://malefashion.taojaa.shop/malefashion/malefashion/1.0.0/assets/img/banner/banner-3.jpg"
+                    }
+                }
+            },
+            "settings": {
+                "show": true
+            }
+        },
+        "promotion": {
+            "type": "promotion",
+            "widgets": {
+                "category": {
+                    "settings": {
+                        "title_1": "Clothings Hot",
+                        "title_2": "Shoe Collection",
+                        "title_3": "Accessories"
+                    }
+                },
+                "item": {
+                    "settings": {
+                        "image": "https://malefashion.taojaa.shop/malefashion/malefashion/1.0.0/assets/img/product-sale.png",
+                        "sale_tag": "Sale Of",
+                        "discount": "10%"
+                    }
+                },
+                "timer": {
+                    "settings": {
+                        "title": "Deal Of The Week",
+                        "heading": "Multi-pocket Chest Bag Black",
+                        "button_text": "Shop Now",
+                        "date": {
+                            "type": "date",
+                            "default": "2024/12/30"
+                        }
+                    }
+                }
+            },
+            "settings": {
+                "show": true
+            }
+        },
+        "lastest-blog-posts": {
+            "type": "lastest-blog-posts",
+            "settings": {
+                "show": false,
+                "title": "Latest News",
+                "heading": "Fashion New Trends"
+            }
+        }
+    },
+    "order": [
+        "hero",
+        "featured-collections",
+        "featured-products",
+        "promotion",
+        "lastest-blog-posts"
+    ],
+    "data": {
+        "featured_products": true,
+        "featured_collections": true,
+        "best_selling": true
+    }
+}

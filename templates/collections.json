@@ -1,0 +1,21 @@
+{
+    "layout": "main",
+    "sections": {
+        "collections": {
+            "type": "main-collections",
+            "settings": {
+                "title": "Collections",
+                "sort": "alphabetical",
+                "image_ratio": "square"
+            }
+        }
+    },
+    "order": [
+        "collections"
+    ],
+    "data": {
+        "collections": {
+            "product_count": true
+        }
+    }
+}

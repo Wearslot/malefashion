@@ -1,0 +1,69 @@
+<section class="related">
+    <div class="container">
+        <div id="review_form">
+            <div id="respond" class="comment-respond">
+                <h3 id="reply-title" class="comment-reply-title">Add a review for &ldquo;{{ product.name }}&rdquo;
+                    <small>
+                        <a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond"
+                            style="display:none;">Cancel reply</a>
+                    </small>
+                </h3>
+                <review-form>
+                    <div class="checkout__form">
+                        {{#form 'review' 'id="commentform"' product=product}}
+                        <p class="comment-notes">
+                            <span id="email-notes">Your email address will not be published.</span>
+                            <span class="required-field-message">Required fields are marked <span
+                                    class="required">*</span></span>
+                        </p>
+                        <div class="comment-form-rating">
+                            <label for="rating">Your Rating <span class="required">*</span></label>
+                            
+                            <div class="star-rating">
+                                <span class="star" data-value="1">&#9733;</span>
+                                <span class="star" data-value="2">&#9733;</span>
+                                <span class="star" data-value="3">&#9733;</span>
+                                <span class="star" data-value="4">&#9733;</span>
+                                <span class="star" data-value="5">&#9733;</span>
+                            </div>
+
+                            <!-- Hidden input to store selected rating -->
+                            <input type="hidden" name="rating" id="rating" value="">
+                        </div>
+                        <div class="checkout__input mb-2">
+                            <textarea id="comment" name="comment" class="form-control" placeholder="Your Review *"
+                                rows="8" maxlength="65525" required="required"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Your Name<span>*</span></p>
+                                    <input type="text" name="fullname" id="fullname">
+                                    {{#if errors.fullname}}
+                                    <span>{{errors.fullname}}</span>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Email Address<span>*</span></p>
+                                    <input type="email" name="email" id="email">
+                                    {{#if errors.email}}
+                                    <span>{{errors.email}}</span>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                        <button name="submit" type="submit" id="submit" data-id="{{product.id}}" class="site-btn">
+                            Submit Review
+                        </button>
+                        <p class="qodef-widget-title" id="feedback"></p>
+                        {{/form}}
+                    </div>
+                </review-form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="{{asset_url}}/js/product-review.js"></script>

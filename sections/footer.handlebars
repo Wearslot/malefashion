@@ -1,0 +1,68 @@
+<!-- Footer Section Begin -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="footer__about">
+                    {{#widget name="footer_logo"}}
+                    <div class="footer__logo">
+                        <a href="#"><img src="{{widget.settings.image}}" alt=""></a>
+                    </div>
+                    {{/widget}}
+                    <p>{{store.description}}</p>
+                    <a href="#"><img src="{{asset_url}}/img/payment.png" alt=""></a>
+                </div>
+            </div>
+            {{#widget name="quick_links"}}
+            <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h6>{{ widget.settings.heading }}</h6>
+                    <ul>
+                        {{#iterate store.navigations.footer_menu}}
+                        <li><a href="{{ current.url }}">{{ current.name }}</a></li>
+                        {{/iterate}}
+                    </ul>
+                </div>
+            </div>
+            {{/widget}}
+            <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h6>Support</h6>
+                    <ul>
+                        <li><a href="/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+                <div class="footer__widget">
+                    <h6>{{ section.settings.newsletter_block_heading }}</h6>
+                    <div class="footer__newslatter">
+                        <p>{{ section.settings.newsletter_block_desc }}</p>
+                        {{#form 'newsletter'}}
+                        <input type="text" name="email" id="email" placeholder="Your email">
+                        <button type="submit"><span class="icon_mail_alt"></span></button>
+                        <div id="email_feedback" class="text-white"></div>
+                        {{/form}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="footer__copyright__text">
+                    <p>Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+                        All rights reserved | Powered by <a href="https://taojaa.com/" class="text-white"
+                            target="_blank">Taojaa</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="{{asset_url}}/js/newsletter-modal.js" type="text/javascript"></script>
+
+<!-- Footer Section End -->

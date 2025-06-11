@@ -1,0 +1,22 @@
+{
+    "layout": "main",
+    "sections": {
+        "catalogs": {
+            "type": "catalog",
+            "settings": {
+                "columns": 4,
+                "sort_options": "high-to-low"
+            },
+            "widgets": {
+                "breadcrumb": {
+                    "settings": {
+                        "title": "Shop"
+                    }
+                }
+            }
+        }
+    },
+    "order": [
+        "catalogs"
+    ]
+}

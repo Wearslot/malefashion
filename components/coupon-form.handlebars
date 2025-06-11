@@ -1,0 +1,25 @@
+<h6>Discount codes</h6>
+<discount-apply class="{{#ifCond cart.discount_applied '==' true}} d-none {{/ifCond}}">
+    {{#form "apply-coupon"}}
+    <input type="text" name="coupon" placeholder="Coupon code">
+    <button type="submit">
+        <span class="button_text">Apply</span>
+        {{{component 'loader'}}}
+    </button>
+    {{/form}}
+    <div class="error">
+        <p class="error-message text-danger"></p>
+    </div>
+</discount-apply>
+<discount-remove class="{{#ifCond cart.discount_applied '!=' true}} d-none {{/ifCond}}">
+    {{#form "remove-coupon"}}
+    <input type="text" name="coupon" disabled="true" value="{{cart.discount.coupon_code}}" placeholder="Coupon code">
+    <button type="submit">
+        <span class="button_text">Remove</span>
+        {{{component 'loader'}}}
+    </button>
+    {{/form}}
+    <div class="error">
+        <p class="error-message text-danger"></p>
+    </div>
+</discount-remove>

@@ -1,0 +1,28 @@
+<!-- Offcanvas Menu Begin -->
+<div class="offcanvas-menu-overlay"></div>
+<div class="offcanvas-menu-wrapper">
+    <div class="offcanvas__option">
+        <div class="offcanvas__links">
+            <a href="/account/login">Sign in</a>
+            <a href="/account/register">Register</a>
+        </div>
+        <div class="offcanvas__top__hover">
+            <span>{{currency.code}} <i class="arrow_carrot-down"></i></span>
+            <ul style="max-height: 350px; overflow: auto;">
+                {{#iterate currencies}}
+                <li style="text-align: left;" data-currency="{{ current.code }}">{{ current.name }}
+                    ({{current.code }})</li>
+                {{/iterate}}
+            </ul>
+        </div>
+    </div>
+    <div class="offcanvas__nav__option">
+        <a href="#" class="search-switch"><img src="{{asset_url}}/img/icon/search.png" alt=""></a>
+        {{{ component "cart-summary" }}}
+    </div>
+    <div id="mobile-menu-wrap"></div>
+    <div class="offcanvas__text">
+        <p>{{text}}</p>
+    </div>
+</div>
+<!-- Offcanvas Menu End -->

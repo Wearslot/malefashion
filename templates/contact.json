@@ -1,0 +1,25 @@
+{
+    "layout": "main",
+    "sections": {
+        "main-contact": {
+            "type": "main-contact",
+            "settings": {
+                "background": {
+                    "type": "image",
+                    "default": ""
+                },
+                "heading": {
+                    "type": "text",
+                    "default": "store.name"
+                },
+                "subheading": {
+                    "type": "text",
+                    "default": "Contact Us"
+                }
+            }
+        }
+    },
+    "order": [
+        "main-contact"
+    ]
+}

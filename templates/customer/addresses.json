@@ -1,0 +1,11 @@
+{
+    "layout": "",
+    "sections": {
+        "addresses": {
+            "type": "customer/main-addresses"
+        }
+    },
+    "order": [
+        "addresses"
+    ]
+}

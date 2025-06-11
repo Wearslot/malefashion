@@ -1,0 +1,19 @@
+{
+    "layout": "main",
+    "sections": {
+        "catalogs": {
+            "type": "catalog",
+            "settings": {},
+            "widgets": {
+                "breadcrumb": {
+                    "settings": {
+                        "title": "Collection"
+                    }
+                }
+            }
+        }
+    },
+    "order": [
+        "catalogs"
+    ]
+}

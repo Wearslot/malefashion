@@ -1,0 +1,104 @@
+<section class="shopping-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="error">
+                    <p class="error-message text-danger"></p>
+                </div>
+                <cart-items>
+                    <div class="shopping__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#iterate cart.items as="item"}}
+                                <tr id="cart-item-{{add item.index 1}}">
+                                    <td class="product__cart__item">
+                                        <div class="product__cart__item__pic">
+                                            <img src="{{item.image}}" width="90" alt="">
+                                        </div>
+                                        <div class="product__cart__item__text">
+                                            <h6>{{ item.title }}</h6>
+                                            <h5>{{{currency.symbol}}} {{item.sale_price}}</h5>
+                                            {{#if item.variant}}
+                                            <p>{{item.variant.name}}</p>
+                                            {{/if}}
+                                        </div>
+                                    </td>
+                                    <td class="quantity__item">
+                                        <quantity-field>
+                                            <div class="quantity">
+                                                <div class="pro-qty-2">
+                                                    <span class="fa fa-angle-left dec qtybtn"></span>
+                                                    <input type="text" class="cart-item__quantity"
+                                                        data-line="{{add item.index 1}}"
+                                                        data-step="{{item.default_or_selected_variant.quantity_rule.step}}"
+                                                        data-min="{{item.default_or_selected_variant.quantity_rule.min}}"
+                                                        data-max="{{item.default_or_selected_variant.quantity_rule.max}}"
+                                                        name="quantity[]" value="{{item.quantity}}">
+                                                    <span class="fa fa-angle-right inc qtybtn"></span>
+                                                </div>
+                                            </div>
+                                        </quantity-field>
+                                    </td>
+                                    <td class="cart__price" id="cart-item__subtotal-{{add item.index 1}}">
+                                        {{{component "cart-item-subtotal" item=item}}}
+                                    </td>
+                                    <td class="cart__close">
+                                        <cart-remove-button>
+                                            <a class="cart-remove-btn"
+                                                href="/cart/update?line={{add item.index 1}}&quantity=0"
+                                                data-line="{{add item.index 1}}">
+                                                <i class="fa fa-close" data-line="{{add item.index 1}}"></i>
+                                            </a>
+                                        </cart-remove-button>
+                                    </td>
+                                </tr>
+                                {{/iterate}}
+                            </tbody>
+                        </table>
+                    </div>
+                </cart-items>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="continue__btn">
+                            <a href="/shop">Continue Shopping</a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="continue__btn update__btn">
+                            <button type="submit"><i class="fa fa-spinner"></i> Update cart</button>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="cart__discount coupon-form">
+                    {{{ component 'coupon-form' }}}
+                </div>
+
+                <div class="cart__total">
+                    <h6>Cart total</h6>
+                    <ul>
+                        <li>Subtotal <span class="cart-subtotal-amount">{{{component "cart-subtotal-amount"}}}</span>
+                        </li>
+                        <li>Discount <span class="cart-discount-amount">{{{component "cart-discount-amount"}}}</span>
+                        </li>
+                        <li>Total <span class="cart-total-amount">{{{component "cart-total-amount"}}}</span></li>
+                    </ul>
+                    <a href="/checkout" class="primary-btn">Proceed to checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="{{asset_url}}/js/cart.js"></script>
+<script type="text/javascript" src="{{asset_url}}/js/quantity-field.js"></script>
+<script type="text/javascript" src="{{asset_url}}/js/discount.js"></script>

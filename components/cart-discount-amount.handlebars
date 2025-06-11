@@ -1,0 +1,4 @@
+- {{{ money cart.discount.amount}}}
+{{#ifCond cart.discount.type '==' 'percentage'}} 
+    (<strong>{{percentage cart.discount.value}}</strong>) discount
+{{/ifCond}}

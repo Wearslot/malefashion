@@ -1,0 +1,12 @@
+{
+    "layout": "main",
+    "sections": {
+        "main-blog": {
+            "type": "main-blog",
+            "settings": {
+                "show_categories": true
+            }
+        }
+    },
+    "order": []
+}

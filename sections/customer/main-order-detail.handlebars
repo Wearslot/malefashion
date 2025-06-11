@@ -1,0 +1,15 @@
+<h4>Update Order</h4>
+{{#each errors}}
+<p style="color: red;">{{this}}</p>
+{{/each}}
+{{#if success}}
+<p style="color: green;">{{success}}</p>
+{{/if}}
+{{#form "update-order" order=order}}
+    <select name="status">
+        <option>Select status</option>
+        <option value="cancel">Cancel</option>
+        <option value="return">Return</option>
+    </select>
+    <button type="submit">Update Order Status</button>
+{{/form}}

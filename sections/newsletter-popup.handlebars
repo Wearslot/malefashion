@@ -1,0 +1,57 @@
+<newletter-modal>
+    <div id="qodef-subscribe-popup-modal" class="qodef-sp-holder qodef-sp-prevent-cookies">
+        <div class="qodef-sp-inner">
+            <a href="javascript:void(0)" class="qodef-sp-close news-modal-close">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="19px" height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19"
+                    xml:space="preserve">
+                    <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="1.015" y1="1.015" x2="17.985"
+                        y2="17.985" />
+                    <line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="17.985" y1="1.015" x2="1.015"
+                        y2="17.985" />
+                </svg> </a>
+            <div class="qodef-sp-content-container">
+                <div class="qodef-sp-content">
+                    <p class="qodef-sp-subtitle">{{ settings.newsletter_popup.description.value }}</p>
+                    <h3 class="qodef-sp-title">{{ settings.newsletter_popup.title.value }}</h3>
+                    <div role="form" class="wpcf7" id="wpcf7-f2931-o2" lang="en-US" dir="ltr">
+                        <div class="screen-reader-response">
+                            <p role="status" aria-live="polite" aria-atomic="true"></p>
+                            <ul></ul>
+                        </div>
+                        {{#form 'newsletter' 'class="wpcf7-form init demo" data-status="init"'}}
+                        <span class="wpcf7-form-control-wrap" data-name="your-email">
+                            <input type="email" name="email" value size="40" id="email"
+                                class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                            aria-required="true" aria-invalid="false" placeholder="Your e-mail" /></span>
+                        <button type="submit"
+                            class="wpcf7-form-control wpcf7-submit qodef-button qodef-size--normal qodef-layout--filled qodef-m" id="signupButton">
+                            <span class="qodef-m-text">Send</span>
+                            {{{component "loader"}}}
+                        </button>
+                        <div class="wpcf7-response-output" aria-hidden="true"></div>
+                        {{/form}}
+                    </div>
+                    <div class="qodef-sp-prevent" style="margin-top: 20px;">
+                        <div class="qodef-sp-prevent-inner">
+                            <span class="qodef-sp-prevent-input" data-value="no">
+                                <svg x="0px" y="0px" width="10.656px" height="10.692px" viewBox="0 0 10.656 10.692"
+                                    enable-background="new 0 0 10.656 10.692" xml:space="preserve">
+                                    <path
+                                        d="M10.415,9.752c0.252,0.254,0.303,0.611,0.114,0.8l0,0c-0.188,0.188-0.545,0.136-0.798-0.118L0.242,0.913 C-0.011,0.658-0.062,0.3,0.127,0.111l0,0C0.316-0.075,0.673-0.023,0.926,0.23L10.415,9.752z" />
+                                    <path
+                                        d="M0.229,9.779c-0.253,0.253-0.305,0.609-0.117,0.799l0,0c0.188,0.189,0.545,0.138,0.799-0.115l9.515-9.495 c0.253-0.254,0.305-0.611,0.117-0.801l0,0C10.355-0.021,9.998,0.03,9.744,0.283L0.229,9.779z" />
+                                </svg>
+                            </span>
+                            <label class="qodef-sp-prevent-label">Disable This Pop-up</label>
+                        </div>
+                        <p class="qodef-m-text" id="email_feedback" style="margin-top: 15px; border: 2px solid aqua; padding: 5px;"></p>
+                    </div>
+                </div>
+                <div class="qodef-sp-image" style="background-image: url({{settings.newsletter_popup.image.value}})">
+                </div>
+            </div>
+        </div>
+    </div>
+</newletter-modal>
+

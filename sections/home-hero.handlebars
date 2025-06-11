@@ -1,0 +1,48 @@
+<section class="hero">
+    <div class="hero__slider owl-carousel">
+        {{#widget name="slide_1"}}
+        <div class="hero__items set-bg" data-setbg="{{widget.settings.image}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-7 col-md-8">
+                        <div class="hero__text">
+                            <h6>{{ widget.settings.sub_heading }}</h6>
+                            <h2>{{ widget.settings.heading }}</h2>
+                            <p>{{ widget.settings.description }}</p>
+
+                            <a href="#" class="primary-btn">{{ widget.settings.button_text }} <span
+                                    class="arrow_right"></span></a>
+
+                            {{{component 'hero-social'}}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/widget}}
+
+        {{#widget name="slide_2"}}
+        <div class="hero__items set-bg" data-setbg="{{widget.settings.image}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-7 col-md-8">
+                        <div class="hero__text">
+                            <h6>{{ widget.settings.sub_heading }}</h6>
+                            <h2>{{ widget.settings.heading }}</h2>
+                            <p>{{ widget.settings.description }}</p>
+
+                            <a href="#" class="primary-btn">{{ widget.settings.button_text }} <span
+                                    class="arrow_right"></span></a>
+
+                            {{{component 'hero-social'}}}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/widget}}
+
+    </div>
+</section>

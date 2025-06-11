@@ -1,0 +1,8 @@
+<cart-summary>
+    <a href="/cart"><img src="{{asset_url}}/img/icon/cart.png" alt="">
+        <span class="cart-count">{{ cart.items_count }}</span>
+    </a>
+    <div class="price cart-subtotal-amount">{{{ money cart.subtotal_price }}}</div>
+</cart-summary>
+
+<script type="text/javascript" src="{{asset_url}}/js/cart-summary.js"></script>

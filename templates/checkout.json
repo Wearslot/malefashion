@@ -1,0 +1,15 @@
+{
+    "layout": "main",
+    "sections": {
+        "main-checkout": {
+            "type": "main-checkout",
+            "settings": {}
+        }
+    },
+    "order": [
+        "main-checkout"
+    ],
+    "data": {
+        "collections": true
+    }
+}

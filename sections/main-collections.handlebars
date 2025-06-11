@@ -1,0 +1,41 @@
+<section class="banner spad">
+    <div class="container">
+        <div class="row">
+            {{#iterate collections as="collection"}}
+            <div class="col-lg-3 mb-4">
+                <div class="banner__item">
+                    <div class="banner__item__pic">
+                        <img src="{{ collection.image }}" alt="">
+                    </div>
+                    <div class="banner__item__text">
+                        <div>
+                            <h2>{{ collection.name }} ({{ collection.product_count }})</h2>
+                            <a href="/collection/{{ collection.slug }}">Explore Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/iterate}}
+        </div>
+        {{#ifCond product.pagination.pages '>' 1}}
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product__pagination">
+                    {{#pagination product.pagination
+                    next=""
+                    previous=""
+                    }}
+                    <a class="{{#ifCond product.pagination.page '==' page}} active {{/ifCond}}" href="#">
+                        {{page}}
+                    </a>
+
+                    {{#ifCond index '==' limit}}
+                    {{#ifCond product.pagination.pages '>' page}}<span>...</span>{{/ifCond}}
+                    {{/ifCond}}
+                    {{/pagination}}
+                </div>
+            </div>
+        </div>
+        {{/ifCond}}
+    </div>
+</section>

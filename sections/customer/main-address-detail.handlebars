@@ -1,0 +1,35 @@
+<h4>Add Address</h4>
+{{#each errors}}
+<p style="color: red;">{{this}}</p>
+{{/each}}
+{{#if success}}
+<p style="color: green;">{{success}}</p>
+{{/if}}
+{{#form "add-address"}}
+    <input name="firstname" placeholder="firstname" />
+    <input name="lastname" placeholder="lastname" />
+    <input name="address_line_1" placeholder="address_line_1" />
+    <input name="address_line_2" placeholder="address_line_2" />
+    <input name="city" placeholder="city" />
+    <input name="state" placeholder="state" />
+    <input name="country" placeholder="country" />
+    <button type="submit">Add</button>
+{{/form}}
+
+
+<h4>Update Address</h4>
+{{#form "update-address" address=address}}
+    <input name="firstname" placeholder="firstname" value="{{address.firstname}}" />
+    <input name="lastname" placeholder="lastname" value="{{address.lastname}}" />
+    <input name="address_line_1" placeholder="address_line_1" value="{{address.address_line_1}}" />
+    <input name="address_line_2" placeholder="address_line_2" value="{{address.address_line_2}}" />
+    <input name="city" placeholder="city" value="{{address.city}}"/>
+    <input name="state" placeholder="state" value="{{address.state}}"/>
+    <input name="country" placeholder="country" value="{{address.country}}" />
+    <button type="submit">Update</button>
+{{/form}}
+
+<h4>Delete Address</h4>
+{{#form "delete-address" address=address}}
+    <button type="submit">Delete</button>
+{{/form}}
