@@ -18,5 +18,21 @@
     },
     "order": [
         "catalogs"
-    ]
+    ],
+    "data": {
+        "products": {
+            "limit": 20,
+            "brand": "Nike",
+            "collection": "Spring 2024"
+        }, 
+        "collections": {
+            "limit": 10,
+            "search": "sneakers"
+            
+        },
+        "product": {
+            "id": "12345",
+            "slug": "nike-air-max-2024",
+        }
+    }
 }
